@@ -186,13 +186,13 @@ window.onload = function() {
       if(this.playerTurn == 1) {
         this.playerTurn = 2;
         $('.col-min').css("border-bottom", "none");
-        $('.col-max').css("border-bottom", "5px solid black");
+        $('.col-max').css("border-bottom", "10px solid yellow");
         return;
       }
       if(this.playerTurn == 2) {
         this.playerTurn = 1;
         $('.col-max').css("border-bottom", "none");
-        $('.col-min').css("border-bottom", "5px solid black");
+        $('.col-min').css("border-bottom", "10px solid yellow");
       }
     },
     //reset the game
