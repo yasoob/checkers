@@ -177,8 +177,9 @@ div.stats #player2 {
   width: 100%;
   padding-bottom: 20px;
 }
-.reset button{
-  width: 40vmin;
+.reset a{
+  width: 30vmin;
+  display: inline-block;
   border-radius: 4px;
   background-color: #847272;
   color: white;
@@ -186,11 +187,69 @@ div.stats #player2 {
   cursor: pointer;
   transition: all .3s;
 }
-.reset button:hover{
+.reset a:hover{
   background-color: #A29E9E;
+  text-decoration: none;
 }
-.reset button:focus{
+.reset a:focus{
   outline: none;
+}
+.modalDialog {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+.modalDialog:target {
+    opacity:1;
+    pointer-events: auto;
+}
+.modalDialog > div {
+    max-width: 700px;
+    position: relative;
+    margin: 5% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: #fff;
+}
+.close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+.modalDialog h2{
+    border-bottom: 1px solid black;
+}
+.modalDialog li{
+    padding-bottom: 5px;
+}
+.modalDialog h2, .modalDialog p, .modalDialog ul, .modalDialog li{
+    color: black;
+}
+.close:hover {
+    background: #00d9ff;
 }
 #player2 .captured {
     width: 2.4vmin;
@@ -211,7 +270,7 @@ div.stats div.turn {
     background: linear-gradient(to right, #BEEE62 50%, transparent 50%);
     border-radius: 0 0 3px 3px;
 }
-div.stats button#cleargame {
+div.stats a#cleargame {
     width: 100%;
     display: block;
     border: 0;
@@ -225,8 +284,9 @@ div.stats button#cleargame {
     box-shadow: 1px 1px 3px #232621;
     transition: background-color 0.15s linear;
 }
-div.stats button#cleargame:hover {
+div.stats a#cleargame:hover {
     background-color: #0c5a6b;
+    text-decoration: none;
 }
 div#board {
     position: absolute;
